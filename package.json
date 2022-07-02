@@ -8,10 +8,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.27.2",
-<<<<<<< HEAD
     "bootstrap": "^5.1.3",
-=======
->>>>>>> 45594bf2591d8d47337a5d305ec872e4249c8fd5
     "native-base": "^3.4.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",

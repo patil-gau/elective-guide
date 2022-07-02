@@ -3,18 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.27.2",
     "native-base": "^3.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.2.0",
     "react-native-safe-area-context": "^3.4.1",
     "react-native-svg": "^12.3.0",
     "react-native-web": "^0.16.5",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "zustand": "^4.0.0-rc.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -3,6 +3,9 @@ import App from "./App";
 import { NativeBaseProvider, extendTheme } from "native-base";
 import reportWebVitals from "./reportWebVitals";
 import { createRoot } from 'react-dom/client';
+import axios from "axios";
+
+axios.defaults.baseURL = "http://192.168.231.243:8000";
 
 const theme = extendTheme({
   config: {

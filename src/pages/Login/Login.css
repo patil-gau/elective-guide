@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.login-container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url('../../assets/images/login.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+    text-align: center;
+}
+
+.form-block {
+    z-index: 1;
+}
+
+.login-form {
+    display: inline-block;
+    align-items: center;
+    margin-top: 8%;
+    /* width: 16%; */
+}
+
+.form-group {
+    padding: 16px 8px;
+    text-align: start;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+}

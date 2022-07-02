@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player'
 function Report() {
  useEffect(() => {
  var id = 1;   
- axios.get(`http://127.0.0.1:8000/electives/semelectives/student/${id}`).then((res)=>{
+ axios.get(`/electives/semelectives/student/${id}`).then((res)=>{
    console.log(res)
    setelectives(res.data)
  }).catch((err)=>{
@@ -32,7 +32,7 @@ function Report() {
      "elective_id" : electiveSelected,
      "cgpa" : cgpa
     }
-    axios.post("http://127.0.0.1:8000/electives/elective/report/",data).then((res)=>{
+    axios.post("/electives/elective/report/",data).then((res)=>{
         console.log(res)
         setreport(res.data)
 
@@ -93,12 +93,12 @@ function Report() {
 
             <div className="elective-content-container">
                 <h3 style={{fontWeight:'bold'}}>Syllabus Copy</h3>
-                <a href={`http://127.0.0.1:8000${report.syllabus_pdf}`}>Click to View Syllabus</a>
+                <a href={`${axios.defaults.baseURL}+${report.syllabus_pdf}`}>Click to View Syllabus</a>
             </div>
 
             <div className="elective-content-container">
                 <h3 style={{fontWeight:'bold'}}>Video</h3>
-                <ReactPlayer playing={true} url={`http://127.0.0.1:8000${report.introduction_video}`}/>
+                <ReactPlayer playing={true} url={`${axios.defaults.baseURL}+${report.introduction_video}`}/>
             </div>
 
         

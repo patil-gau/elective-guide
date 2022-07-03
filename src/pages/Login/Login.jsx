@@ -4,10 +4,14 @@ import { Input, Button } from "native-base";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import { successToast, errorToast } from "../../components/Toast";
+import {useNavigate} from 'react-router-dom'
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate()
+
 
   const handleSubmit = () => {
     console.log(`email & passsword:  ${email} & ${password}`);
@@ -27,6 +31,11 @@ function Login() {
           successToast('Log In Successful!')
           setPassword("");
           setEmail("");
+          localStorage.setItem("student_id",res.data.student_id)
+          localStorage.setItem("email",res.data.email)
+          localStorage.setItem("access",res.data.access)
+          localStorage.setItem("refresh",res.data.refresh)
+          navigate('/dashboard')
         }
         else if (res.status === 401){
           errorToast('Invalid Email or Password')

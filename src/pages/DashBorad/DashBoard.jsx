@@ -2,13 +2,15 @@ import {React,useEffect, useState} from "react";
 import { Heading, Flex, Center ,Text} from "native-base";
 import "./Dashboard.css";
 import axios from 'axios';
+import NavBar from '../../components/NavBar/NavBar'
 
 
 function DashBoard() {
   const [dashboardData, setData] = useState([]);
   useEffect(() => {
+    var student_id = localStorage.getItem('student_id')
     
-    axios.get('http://192.168.231.243:8000/ratings/student/home/1').then((res)=>{
+    axios.get(`/ratings/student/home/${student_id}`).then((res)=>{
       console.log(res);
       setData(res.data);
     }).catch((e)=>{
@@ -18,6 +20,7 @@ function DashBoard() {
   });
   return (
     <>
+    <NavBar/>
       <div className="main-container">
         <div className="outer-div">
           <div className="head-container">

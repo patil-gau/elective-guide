@@ -1,14 +1,14 @@
 import React,{useState,useEffect} from 'react'
 import Navbar from '../../components/NavBar/NavBar'
-import {Input,Button,Select,Container,Heading,Text} from 'native-base'
+import {Input,Button,Select} from 'native-base'
 import './Report.css'
 import axios from 'axios'
 import ReactPlayer from 'react-player'
 
 function Report() {
  useEffect(() => {
- var id = 1;   
- axios.get(`/electives/semelectives/student/${id}`).then((res)=>{
+ var student_id = localStorage.getItem('student_id')  
+ axios.get(`/electives/semelectives/student/${student_id}`).then((res)=>{
    console.log(res)
    setelectives(res.data)
  }).catch((err)=>{
@@ -93,12 +93,12 @@ function Report() {
 
             <div className="elective-content-container">
                 <h3 style={{fontWeight:'bold'}}>Syllabus Copy</h3>
-                <a href={`${axios.defaults.baseURL}+${report.syllabus_pdf}`}>Click to View Syllabus</a>
+                <a href={`http://127.0.0.1:8000${report.syllabus_pdf}`}>Click to View Syllabus</a>
             </div>
 
             <div className="elective-content-container">
                 <h3 style={{fontWeight:'bold'}}>Video</h3>
-                <ReactPlayer playing={true} url={`${axios.defaults.baseURL}+${report.introduction_video}`}/>
+                <ReactPlayer playing={true} url={`http://127.0.0.1:8000${report.introduction_video}`}/>
             </div>
 
         

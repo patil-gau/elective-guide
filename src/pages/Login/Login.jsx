@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { successToast, errorToast } from "../../components/Toast";
 import {useNavigate} from 'react-router-dom'
 
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

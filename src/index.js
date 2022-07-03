@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createRoot } from 'react-dom/client';
 import axios from "axios";
 
-axios.defaults.baseURL = "http://192.168.231.243:8000";
+axios.defaults.baseURL = "http://127.0.0.1:8000";
 
 const theme = extendTheme({
   config: {
